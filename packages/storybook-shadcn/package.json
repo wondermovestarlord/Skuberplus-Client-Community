@@ -80,7 +80,7 @@
     "prettier": "^3.6.2",
     "radix-ui": "^1.4.3",
     "react": "workspace:*",
-    "react-day-picker": "^9.11.0",
+    "react-day-picker": "^9.14.0",
     "react-dom": "workspace:*",
     "react-hook-form": "^7.63.0",
     "react-resizable-panels": "^3.0.6",
