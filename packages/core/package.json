@@ -84,7 +84,7 @@
     "@ai-sdk/anthropic": "^3.0.48",
     "@ai-sdk/google": "^3.0.33",
     "@ai-sdk/openai": "^3.0.36",
-    "@anthropic-ai/sdk": "^0.71.2",
+    "@anthropic-ai/sdk": "^0.88.0",
     "@hapi/call": "^9.0.1",
     "@hapi/subtext": "^8.1.1",
     "@hello-pangea/dnd": "^18.0.1",
