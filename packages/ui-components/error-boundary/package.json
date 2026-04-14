@@ -48,7 +48,7 @@
     "@skuberplus/utilities": "workspace:^",
     "@skuberplus/webpack": "workspace:^",
     "@types/react": "^18.3.3",
-    "css-loader": "^6.11.0",
+    "css-loader": "^7.1.4",
     "mobx-observable-history": "^2.0.3",
     "postcss-loader": "^8.2.0",
     "sass-loader": "^16.0.5",

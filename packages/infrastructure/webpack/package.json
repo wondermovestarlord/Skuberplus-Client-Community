@@ -30,7 +30,7 @@
     "@ogre-tools/injectable": "^17.11.1",
     "@ogre-tools/injectable-extension-for-auto-registration": "^17.11.1",
     "@tailwindcss/postcss": "^4.1.13",
-    "css-loader": "^6.11.0",
+    "css-loader": "^7.1.4",
     "fork-ts-checker-webpack-plugin": "^9.1.0",
     "fs-extra": "^11.3.2",
     "lodash": "^4.17.21",
