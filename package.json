@@ -104,7 +104,7 @@
     "chalk": "^4.1.2",
     "concurrently": "9.2.1",
     "micromatch": "^4.0.8",
-    "pnpm": "10.17.1",
+    "pnpm": "10.33.0",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "ts-loader": "^9.5.4",
     "ts-morph": "^27.0.2",
