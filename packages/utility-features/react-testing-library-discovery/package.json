@@ -34,7 +34,7 @@
   "devDependencies": {
     "@skuberplus/typescript": "workspace:^",
     "@skuberplus/webpack": "workspace:^",
-    "@testing-library/react": "^16.3.0",
+    "@testing-library/react": "^16.3.2",
     "ts-loader": "^9.5.4",
     "webpack": "^5.101.3"
   }
