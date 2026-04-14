@@ -89,7 +89,7 @@
     "@hapi/call": "^9.0.1",
     "@hapi/subtext": "^8.1.1",
     "@ogre-tools/fp": "^17.11.1",
-    "@ogre-tools/injectable": "^17.11.1",
+    "@ogre-tools/injectable": "^19.0.0",
     "@ogre-tools/injectable-extension-for-auto-registration": "^17.11.1",
     "@ogre-tools/injectable-extension-for-mobx": "^17.11.1",
     "@skuberplus/application": "workspace:^",

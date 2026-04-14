@@ -35,7 +35,7 @@
     "@skuberplus/kube-object": "workspace:^",
     "@skuberplus/utilities": "workspace:^",
     "@ogre-tools/fp": "^17.11.1",
-    "@ogre-tools/injectable": "^17.11.1",
+    "@ogre-tools/injectable": "^19.0.0",
     "byline": "^5.0.0",
     "lodash": "^4.17.21",
     "mobx": "^6.13.7",

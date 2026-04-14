@@ -37,7 +37,7 @@
     "@skuberplus/logger": "workspace:^",
     "@skuberplus/tooltip": "workspace:^",
     "@skuberplus/utilities": "workspace:^",
-    "@ogre-tools/injectable": "^17.11.1",
+    "@ogre-tools/injectable": "^19.0.0",
     "@ogre-tools/injectable-react": "^17.11.1",
     "lodash": "^4.17.21",
     "mobx": "^6.13.7",

@@ -35,7 +35,7 @@
     "@skuberplus/kube-object": "workspace:^",
     "@skuberplus/prometheus": "workspace:^",
     "@skuberplus/utilities": "workspace:^",
-    "@ogre-tools/injectable": "^17.11.1",
+    "@ogre-tools/injectable": "^19.0.0",
     "@ogre-tools/injectable-extension-for-auto-registration": "^17.11.1"
   },
   "devDependencies": {
