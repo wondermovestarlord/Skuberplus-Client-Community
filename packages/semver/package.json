@@ -11,7 +11,7 @@
   },
   "type": "module",
   "dependencies": {
-    "command-line-args": "^6.0.1",
+    "command-line-args": "^6.0.2",
     "semver": "^7.7.2"
   },
   "devDependencies": {
