@@ -276,7 +276,7 @@
     "@skuberplus/messaging-fake-bridge": "workspace:^",
     "@skuberplus/react-testing-library-discovery": "workspace:^",
     "@skuberplus/test-utils": "workspace:^",
-    "@swc/core": "^1.13.5",
+    "@swc/core": "^1.15.24",
     "@tailwindcss/postcss": "^4.1.13",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
