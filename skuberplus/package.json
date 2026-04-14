@@ -202,7 +202,7 @@
     "@types/webpack-env": "^1.18.8",
     "circular-dependency-plugin": "^5.2.2",
     "concurrently": "^9.2.1",
-    "copy-webpack-plugin": "^13.0.0",
+    "copy-webpack-plugin": "^14.0.0",
     "cross-env": "^10.1.0",
     "css-loader": "^6.11.0",
     "electron": "^35.7.5",
