@@ -217,7 +217,7 @@
     "mobx-react-lite": "^3.4.3",
     "mobx-utils": "^6.1.1",
     "moment": "^2.30.1",
-    "moment-timezone": "^0.6.0",
+    "moment-timezone": "^0.6.1",
     "monaco-editor": "^0.53.0",
     "next-themes": "^0.4.6",
     "node-pty": "1.1.0-beta34",
