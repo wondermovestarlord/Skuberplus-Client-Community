@@ -27,6 +27,11 @@ packages/core/src/renderer/components/ @Wondermove-Inc/skuberplus-maintainers
 packages/storybook-shadcn/ @Wondermove-Inc/skuberplus-maintainers
 
 # ============================================
+# CI/CD 및 GitHub 설정
+# ============================================
+.github/ @Wondermove-Inc/skuberplus-maintainers
+
+# ============================================
 # 빌드 및 패키징 설정
 # ============================================
 skuberplus/electron-builder.yml @Wondermove-Inc/skuberplus-maintainers
