@@ -86,8 +86,8 @@ jobs:
             -H "X-Hub-Signature-256: sha256=$SIGNATURE" \
             -d "$PAYLOAD"
 
-      - name: Send webhook (failure)
-        if: failure()
+      - name: Send webhook (failure — agent commits only)
+        if: failure() && github.actor == 'wondermovestarlord'
         env:
           WEBHOOK_URL: ${{ secrets.CLAWPOD_WEBHOOK_URL }}
           WEBHOOK_SECRET: ${{ secrets.CLAWPOD_WEBHOOK_SECRET }}
