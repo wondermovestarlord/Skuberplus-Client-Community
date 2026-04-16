@@ -113,54 +113,25 @@ jobs:
 
       - name: Create draft release
         id: release
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const path = require('path');
-            const version = '${{ steps.version.outputs.version }}';
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            --repo "${{ github.repository }}" \
+            --title "Skuber+ Client v${{ steps.version.outputs.version }}" \
+            --draft \
+            --generate-notes
 
-            // Draft 릴리즈 생성
-            const release = await github.rest.repos.createRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              tag_name: context.ref.replace('refs/tags/', ''),
-              name: `Skuber+ Client v${version}`,
-              draft: true,
-              generate_release_notes: true,
-            });
+          find artifacts -type f | while read file; do
+            echo "Uploading: $(basename "$file")"
+            gh release upload "${{ github.ref_name }}" "$file" \
+              --repo "${{ github.repository }}" \
+              --clobber
+          done
 
-            // artifacts 디렉토리에서 파일 업로드
-            function getFiles(dir) {
-              const files = [];
-              if (!fs.existsSync(dir)) return files;
-              for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-                const fullPath = path.join(dir, entry.name);
-                if (entry.isDirectory()) {
-                  files.push(...getFiles(fullPath));
-                } else {
-                  files.push(fullPath);
-                }
-              }
-              return files;
-            }
-
-            const files = getFiles('artifacts');
-            for (const filePath of files) {
-              const name = path.basename(filePath);
-              console.log(`Uploading: ${name}`);
-              const data = fs.readFileSync(filePath);
-              await github.rest.repos.uploadReleaseAsset({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                release_id: release.data.id,
-                name,
-                data,
-              });
-            }
-
-            core.setOutput('release_id', release.data.id);
-            core.setOutput('release_url', release.data.html_url);
+          RELEASE_JSON=$(gh release view "${{ github.ref_name }}" --repo "${{ github.repository }}" --json databaseId,url)
+          echo "release_id=$(echo "$RELEASE_JSON" | jq -r '.databaseId')" >> "$GITHUB_OUTPUT"
+          echo "release_url=$(echo "$RELEASE_JSON" | jq -r '.url')" >> "$GITHUB_OUTPUT"
 
       - name: Send webhook
         env:
