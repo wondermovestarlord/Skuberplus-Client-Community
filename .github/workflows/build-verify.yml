@@ -44,6 +44,17 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install E2E dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libgtk-3-0 libnotify4 libnss3 libxss1 libxtst6 libasound2 libgbm1
+
+      - name: Run E2E smoke test
+        working-directory: skuberplus
+        run: |
+          xvfb-run pnpm test:integration --testPathPattern="app-preferences|command-palette|extensions"
+        timeout-minutes: 15
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
